@@ -45,9 +45,9 @@ include 'db_connect.php';
             </p>
             <a href="#" class="btn primary">Start Tracking</a>
         </div>
-        <div class="hero-image">
+        <!-- <div class="hero-image">
             <img src="./images/polling-solution.jpg" alt="Election Official" />
-        </div>
+        </div> -->
     </main>
 
     <footer>

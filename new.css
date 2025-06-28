@@ -4,13 +4,10 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+body {
   font-family: "Segoe UI", sans-serif;
   background-color: #eaf2f3;
   color: #333;
-  display: flex;
-  flex-direction: column;
 }
 
 header {
@@ -62,22 +59,29 @@ header {
   color: #04364a;
 }
 
-/* Container grows to fill space */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make content expand to fill space above footer */
 .container, .form-container {
   flex: 1;
   padding: 1rem;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 3rem 2rem;
+  flex-wrap: wrap;
   background-color: #fff;
   color: #000;
   gap: 2rem;
-  flex-wrap: wrap;
 }
 
 .hero-text {
@@ -115,72 +119,121 @@ header {
   border-radius: 10px;
 }
 
+
 /* Page Container */
 .container {
-  width: 90%;
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 /* Forms */
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: block;
-  width: 100%;
-  text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    width: 100%;
+    text-align: left;
 }
 
 select, input, button {
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+/* Button Styles */
 button {
-  background: #004080;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s;
+    background: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 button:hover {
-  background: #0066cc;
+    background: #0066cc;
 }
 
 /* Table Styling */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
 
 th {
-  background: #004080;
-  color: white;
+    background: #004080;
+    color: white;
+}
+
+/* Error & Success Messages */
+/* p {
+    font-size: 16px;
+    color: #ffb703;
+    font-weight: bold;
+} */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 3px 0;
+    }
+ .hero {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-text,
+  .hero-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+    .form-container {
+        width: 95%;
+    }
+
+    label, select, input, button {
+        width: 100%;
+    }
 }
 
 /* Footer Styles */
@@ -189,7 +242,6 @@ footer {
   color: #fff;
   padding: 2rem 1.5rem;
   text-align: center;
-  margin-top: auto;
 }
 
 .footer-container {
@@ -222,7 +274,7 @@ footer {
   opacity: 0.8;
 }
 
-/* Media Queries */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -241,37 +293,25 @@ footer {
   .hero {
     flex-direction: column;
     text-align: center;
-    align-items: center;
   }
 
   .hero-text,
   .hero-image {
     flex: 1 1 100%;
-    max-width: 100%;
-    text-align: center;
     justify-content: center;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
+    text-align: center;
   }
 
   .hero-image {
-    justify-content: center;
     margin-top: 1.5rem;
   }
-
   .form-container {
-    width: 95%;
-  }
+        width: 95%;
+    }
 
-  label, select, input, button {
-    width: 100%;
-  }
+    label, select, input, button {
+        width: 100%;
+    }
 
   .footer-links {
     flex-direction: column;
